@@ -63,11 +63,11 @@ setup_compose() {
     sed -ri "s/image: redash\/redash:([A-Za-z0-9.-]*)/image: redash\/redash:$LATEST_VERSION/" docker-compose.yml
     echo "export COMPOSE_PROJECT_NAME=redash" >> ~/.profile
     echo "export COMPOSE_FILE=/opt/redash/docker-compose.yml" >> ~/.profile
-    sudo cp data/docker-compose.yml /opt/redash
+    #sudo cp data/docker-compose.yml /opt/redash
     export COMPOSE_PROJECT_NAME=redash
     export COMPOSE_FILE=/opt/redash/docker-compose.yml
-    sudo docker-compose run --rm server create_db
-    sudo docker-compose up -d
+    #sudo docker-compose run --rm server create_db
+    #sudo docker-compose up -d
 }
 
 install_docker
